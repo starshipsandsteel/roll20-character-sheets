@@ -86,42 +86,43 @@
 
         <BR>
         <input disabled class="vaesenlabel" value="Motivation">
-
+        <hr class="break">
         <br>
+        <input disabled class="vaesenlabel" value="Trauma" style="width:249px;">
+        <input disabled class="vaesenlabel" value="Dark Secret"><br>
         <textarea class="vaesentextarea" name="attr_trauma"></textarea>
         <textarea class="vaesentextarea" name="attr_darksecret"></textarea>
         <br>
-        <input disabled class="vaesenlabel" value="Trauma" style="width:249px;">
-        <input disabled class="vaesenlabel" value="Dark Secret">
+
     </div>
     <div class="leftbody">
         <h2 class="vaesenheader">Relationships</h2>
         <table>
             <fieldset class="repeating_relationships">
-                <input class="tinytext" type="text" name="attr_RelationPC">
-                <input class="shorttext2" type="text" name="attr_Relation" >
+                <input class="vaesentext" style="width:40px;" type="text" name="attr_RelationPC" placeholder="PC#">
+                <input class="vaesentext" style="width:200px;"type="text" name="attr_Relation" >
             </fieldset>
         </table>
         <h2 class="vaesenheader">Talents</h2>
         <fieldset class="repeating_Talents">
-            <input class="medtext" type="text" name="attr_Talent1" >
+            <input class="vaesentext-col" type="text" name="attr_Talent1" >
         </fieldset>
     </div>
      <div class="rightbody">
         <h2 class="vaesenheader">Insights & Defects</h2>
         <fieldset class="repeating_insights">
-            <input class="medtext" type="text" name="attr_insights" >
+            <input class="vaesentext-col" type="text" name="attr_insights" >
         </fieldset>
         <h2 class="vaesenheader">Advantages</h2>
         <fieldset class="repeating_advantages">
-            <input class="medtext" type="text" name="attr_advantages" >
+            <input class="vaesentext-col" type="text" name="attr_advantages" >
         </fieldset>    
     </div>
 
     <div class="equipment">
         <h2 class="vaesenheader">Equipment</h2>
-        <input class="vaesenlabel" type="text" value="equipment" disabled>
-        <input class="vaesennumberlabel" type="number" value="Mod." disabled>
+        <input class="vaesenlabel" type="text" value="Equipment" disabled  style="width:150px;">
+        <input class="vaesennumberlabel" type="text" value="Mod." disabled>
         <fieldset class="repeating_equipment">
             <input class="vaesentext" type="text" name="attr_equipment" style="width:150px;">
             <input class="vaesennumber" type="number" name="attr_equbonus">
@@ -130,6 +131,7 @@
         <button type="action" name="act_clearequ">Clear</button>
     </div>
     <div class="diemod">
+        <h2 class="vaesenheader">Dice Modifier</h2>
         <input class="vaesenlabel-short" type="text" value="Dice Mod." disabled>
         <input type="text" name="attr_equipedbonus" class="resourcetext" value="0"><button  class="vaesendie" name="basciroll_roll" title="Only use to roll just the die modifier." type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Basic Die Roll}}{{bonus=@{equipedbonus}}}{{result=[[@{equipedbonus}d6>6]]}}"></button>
         <br>
