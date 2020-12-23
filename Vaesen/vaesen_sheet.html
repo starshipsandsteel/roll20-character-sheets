@@ -384,7 +384,8 @@
             </select>
             <input type="number" value="1" name="attr_skill">+
             <input type="number" name="attr_attribskill" class="vaesennumber">
-            <button type="roll"  class="vaesendie" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Skill Check}}{{attribvalue=@{attribskill}}}{{skillvalue=@{skill}}}{{bonus=@{equipedbonus}}}{{agility=@{armoragility}}}{{result=[[(@{attrib_skill}+@{skill}+@{equipedbonus}-@{armoragility})d6>6]]}}" ></button>
+            <input type="text" name="attr_npcskillname" hidden>
+            <button type="roll"  class="vaesendie" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=@{npcskillname}}}{{attribvalue=@{attribskill}}}{{skillvalue=@{skill}}}{{bonus=@{equipedbonus}}}{{agility=@{armoragility}}}{{result=[[(@{attrib_skill}+@{skill}+@{equipedbonus}-@{armoragility})d6>6]]}}" ></button>
         </fieldset>   
   
     </div>
@@ -592,6 +593,7 @@
 
 const buttonlist = ["main","Vaesen","NPC","HQ"];
 const attriblist = ["physique","precision","logic","empathy"];
+const skilllist = ["Agility","Close Comabat","Force","Medicine","Ranged","Stealth","Investigation","Learning","Vigilance","Inspiration","Manipulation","Observation"];
 
 on("clicked:clearequ", function() {
 let resetvalue=0;
@@ -621,7 +623,8 @@ on("change:repeating_NPCskills:attribskillnumber", function(){
         console.log(attriblist[skillnumber]);
         console.log(values[attriblist[skillnumber]]);
         setAttrs({
-            repeating_NPCskills_attribskill:values[attriblist[skillnumber]]
+            repeating_NPCskills_attribskill:values[attriblist[skillnumber]],
+            repeating_NPCskills_npcskillname:skilllist[values.repeating_NPCskills_attribskillnumber-1]
         });
     });
 
