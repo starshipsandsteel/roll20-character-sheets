@@ -339,102 +339,106 @@
 </div>
 <div class="sheet-NPC">
     <div class="NPCName">
-        <input class="nametext"  Type="text" name="attr_character_name"><label class="attriblabel">Name</label>
+        <input class="vaesentext-name"  Type="text" name="attr_character_name"><br><input type="text" class="vaesenlabel" value="name" disabled>
         <hr class="break">
     </div>
     <div class="NPCAttribs">
-        <table class="attribtable">
-            <tr>
-                <h2 class="vaesenheader">Attributes</h3>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Physique</td>
-                <td><input type="number" value="1" name="attr_Physique"></td><td><button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Physique Check}}{{attribvalue=@{physique}}}{{bonus=@{equipedbonus}}}{{result=[[(@{physique}+@{equipedbonus})d6>6]]}}" name="roll_Physique"></button></td>
-            </tr>
-            <tr>
-                <td>Precision</td>
-                <td><input type="number" value="1" name="attr_Precision"></td><td><button class="vaesendie"  type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Precision Check}}{{attribvalue=@{precision}}}{{bonus=@{equipedbonus}}}{{result=[[(@{precision}+@{equipedbonus})d6>6]]}}" name="roll_Precision"></button></td>
-
-            </tr>
-            <tr>
-                <td>Logic</td>
-                <td><input type="number" value="1" name="attr_Logic"></td><td><button class="vaesendie"  type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Logic Check}}{{attribvalue=@{logic}}}{{bonus=@{equipedbonus}}}{{result=[[(@{logic}+@{equipedbonus})d6>6]]}}" name="roll_Logic"></button></td>
-            </tr>
-            <tr>
-                <td>Empathy</td>
-                <td><input type="number" value="1" name="attr_Empathy"></td><td><button class="vaesendie"  type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Empathy Check}}{{attribvalue=@{empathy}}}{{bonus=@{equipedbonus}}}{{result=[[(@{empathy}+@{equipedbonus})d6>6]]}}" name="roll_Empathy"></button></td>
-            </tr>
-        </table>
+        <h2 class="vaesenheader">Attributes</h2>
+        <input type="text" class="vaesenlabel-NPCattrib" value="Physique" disabled>
+        <input type="number" value="1" name="attr_Physique">
+        <button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Physique Check}}{{attribvalue=@{physique}}}{{bonus=@{equipedbonus}}}{{result=[[(@{physique}+@{equipedbonus})d6>6]]}}" name="roll_Physique"></button>
+        <br>
+        <input type="text" class="vaesenlabel-NPCattrib" value="Precision" disabled>
+        <input type="number" value="1" name="attr_Precision">
+        <button class="vaesendie"  type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Precision Check}}{{attribvalue=@{precision}}}{{bonus=@{equipedbonus}}}{{result=[[(@{precision}+@{equipedbonus})d6>6]]}}" name="roll_Precision"></button>
+        <Br>
+        <input type="text" class="vaesenlabel-NPCattrib" value="Logic" disabled>
+        <input type="number" value="1" name="attr_Logic">
+        <button class="vaesendie"  type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Logic Check}}{{attribvalue=@{logic}}}{{bonus=@{equipedbonus}}}{{result=[[(@{logic}+@{equipedbonus})d6>6]]}}" name="roll_Logic"></button>
+        <BR>
+        <input type="text" class="vaesenlabel-NPCattrib" value="Empathy" disabled>
+        <input type="number" value="1" name="attr_Empathy">
+        <button class="vaesendie"  type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Empathy Check}}{{attribvalue=@{empathy}}}{{bonus=@{equipedbonus}}}{{result=[[(@{empathy}+@{equipedbonus})d6>6]]}}" name="roll_Empathy"></button>
         <HR class="break">
-        <table>
-            <tr>
-                <td><span>Mental Toughness</span></td>
-                <td><input type="number" value="1" name="attr_mentaltough"></td>
-            </tr>
-            <tr>
-                <td><span>Physical Toughness</span></td>
-                <td><input type="number" value="1" name="attr_physicaltough"></td>
-            </tr>
-        </table> 
+
+        <input type="text" class="vaesenlabel-NPCattrib" value="Mental Toughness" disabled>
+        <input type="number" value="1" name="attr_mentaltough">
+        <br>
+        <input type="text" class="vaesenlabel-NPCattrib" value="Physical Toughness" disabled>
+        <input type="number" value="1" name="attr_physicaltough">
+
     </div>
     <div class="NPCSkills">
         <HR class="break">
         <h2 class="vaesenheader">Skills</h2>
+        <input type="text" class="vaesenlabel-NPCattrib" value="" disabled>
+        <input type="text" class="vaesenlabel-NPCattrib" value="skill" style="width:45px;" disabled>+
+        <input type="text" class="vaesenlabel-NPCattrib" value="attr" style="width:40px;" disabled><br>
         <fieldset class="repeating_NPCskills">
-            <select name="attr_attrib_skill">
-                <option value="@{physique}" selected="selected">Agility</option>
-                <option value="@{physique}">Close Combat</option>
-                <option value="@{physique}">Force</option>
-                <option value="@{precision}">Medicine</option>
-                <option value="@{precision}">Ranged Combat</option>
-                <option value="@{precision}">Stealth</option>
-                <option value="@{logic}">Investigation</option>
-                <option value="@{logic}">Learning</option>
-                <option value="@{logic}">Vigilance</option>
-                <option value="@{empathy}">Inspiration</option>
-                <option value="@{empathy}">Manipulation</option>
-                <option value="@{empathy}">Observation</option>
+            <select name="attr_attribskillnumber" class="vaesenlabel-NPCattrib">
+                <option value="1" selected="selected">Agility</option>
+                <option value="2">Close Combat</option>
+                <option value="3">Force</option>
+                <option value="4">Medicine</option>
+                <option value="5">Ranged Combat</option>
+                <option value="6">Stealth</option>
+                <option value="7">Investigation</option>
+                <option value="8">Learning</option>
+                <option value="9">Vigilance</option>
+                <option value="10">Inspiration</option>
+                <option value="11">Manipulation</option>
+                <option value="12">Observation</option>
             </select>
-            <input type="number" value="1" name="attr_skill">
-            <button type="roll"  class="vaesendie" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Skill Check}}{{attribvalue=@{attrib_skill}}}{{skillvalue=@{skill}}}{{bonus=@{equipedbonus}}}{{agility=@{armoragility}}}{{result=[[(@{attrib_skill}+@{skill}+@{equipedbonus}-@{armoragility})d6>6]]}}" ></button>
-        </fieldset>     
+            <input type="number" value="1" name="attr_skill">+
+            <input type="number" name="attr_attribskill" class="vaesennumber">
+            <button type="roll"  class="vaesendie" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Skill Check}}{{attribvalue=@{attribskill}}}{{skillvalue=@{skill}}}{{bonus=@{equipedbonus}}}{{agility=@{armoragility}}}{{result=[[(@{attrib_skill}+@{skill}+@{equipedbonus}-@{armoragility})d6>6]]}}" ></button>
+        </fieldset>   
+  
     </div>
     <div class="NPCEquip">
         <h2 class="vaesenheader">Attacks</h2>
-        <table>
-            <tr>
-                <TD class="shorttext" >Name</TD><td class="attribtext">Range</td><td class="attribtext">Damage</td><td class="attribtext">  Bonus</td>
-            </tr>
-        </table>
+
+                <input type="text" disabled class="vaesenlabel-medium" value="Type" >
+                <input type="text" disabled class="vaesenlabel-short" value="Range">
+                <input type="text" disabled class="vaesennumberlabel" value="DMG">
+                <input type="text" disabled class="vaesennumberlabel" value="Bonus">
+
         <fieldset class="repeating_weapons"> 
-            <input class="shorttext" type="text" name="attr_weapon">
-            <input class="attribtext" type="number" name="attr_range">
-            <input class="attribtext" type="number" name="attr_damage">
-            <input class="attribtext" type="number" name="attr_bonus">
+            <input class="vaesentext-medium" type="text" name="attr_weapon">
+            <input class="vaesentext-short" type="text" name="attr_range">
+            <input class="vaesennumber" type="number" name="attr_damage">
+            <input class="vaesennumber" type="number" name="attr_bonus">
             <button type="roll" class="vaesendie" value="&{template:vaesen-attack}{{playername=@{character_name}}}{{attribname=@{weapon} attack!}}{{attribvalue=@{Vaesenmight}}}{{weabonus=@{bonus}}}{{bonus=@{equipedbonus}}}{{damage=@{damage}}}{{result=[[(@{Vaesenmight}+@{bonus}+@{equipedbonus})d6>6]]}}" name="roll_attack"></button>
         </fieldset>
+        <h2 class="vaesenheader">Armor</h2>
+        <input class="vaesenlabel" Value="Armor Name" disabled> 
+        <input class="vaesennumberlabel" Value="Prtct" disabled>
+        <input class="vaesennumberlabel" Value="Agil" disabled><br>
+        <input class="vaesentext" Type="text" name="attr_armor"></td>
+        <input class="vaesennumber" Type="number" name="attr_armorprotection" value="0">
+        <input class="vaesennumber" Type="number" name="attr_armoragility" value="0"><button type="roll" class="vaesendie" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=@{armor} Check}}{{attribvalue=@{armorprotection}}}{{bonus=@{equipedbonus}}}{{result=[[(@{armorprotection}+@{equipedbonus})d6>6]]}}" name="roll_protection"></button>
+
         <h2 class="vaesenheader">Equipment</h2>
         <br>
         <fieldset class="repeating_equipment">
-            <input class="shorttext2" type="text" name="attr_equipment" >
-            <input class="attribtext"type="number" name="attr_equbonus" value="0">
+            <input type="text" class="vaesentext" name="attr_equipment" >
+            <input class="vaesennumber" type="number" name="attr_equbonus" value="0">
             <button type="action" name="act_equip">Use</button>
         </fieldset>
+    
         <hr class="break">
-        <table>
-            <TR>
-                <td><H2 class="biglabel">Dice mod.</H2></td>
-                <td><input type="text" name="attr_equipedbonus" class="resourcetext" value="0"><button  class="vaesendie" name="basciroll_roll" title="Only use to roll just the die modifier." type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Basic Die Roll}}{{bonus=@{equipedbonus}}}{{result=[[@{equipedbonus}d6>6]]}}"></button></td>
-            </tr>
-        </table>
+        <input type="text" class="vaesenlabel-NPCattrib" value="Dice Mod." disabled style="width:100px">
+        <input type="text" name="attr_equipedbonus" class="resourcetext" value="0"><br>
+        <button  class="vaesendie" name="basciroll_roll" title="Only use to roll just the die modifier." type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Basic Die Roll}}{{bonus=@{equipedbonus}}}{{result=[[@{equipedbonus}d6>6]]}}"></button>
         <button class="widebutton" type="action" name="act_increasebonus">+</button>
         <button class="widebutton" type="action" name="act_decreasebonus">-</button>
         <button type="action" name="act_clearequ">Clear</button>
     </div>
     <div class="NPCMisc">
         <hr class="break">
-        <textarea class="NPCtextarea" name="attr_NPC_Notes"></textarea><label class="attriblabel">Notes</label>
+        <input type="text" disabled class="vaesenlabel-medium" value="Notes & Comments"><br>
+        <textarea class="vaesentextarea-NPC" name="attr_NPC_Notes"></textarea>
+
     </div>
 
 </div>
@@ -594,6 +598,7 @@
 <script type="text/worker">
 
 const buttonlist = ["main","Vaesen","NPC","HQ"];
+const attriblist = ["physique","precision","logic","empathy"];
 
 on("clicked:clearequ", function() {
 let resetvalue=0;
@@ -612,6 +617,22 @@ on("clicked:repeating_equipment:equip", function(eventInfo) {
     });
     });
 
+on("change:repeating_NPCskills:attribskillnumber", function(){
+    var gatherlist=attriblist;
+    gatherlist.push("repeating_NPCskills_attribskillnumber");
+    console.log(gatherlist);
+    getAttrs(gatherlist, function(values){
+        console.log(values.repeating_NPCskills_attribskillnumber);
+        var skillnumber=Math.floor(parseInt(values.repeating_NPCskills_attribskillnumber)/4);
+        console.log("Changed");
+        console.log(attriblist[skillnumber]);
+        console.log(values[attriblist[skillnumber]]);
+        setAttrs({
+            repeating_NPCskills_attribskill:values[attriblist[skillnumber]]
+        });
+    });
+
+});
 
 
 on("clicked:lifestyle", function(eventInfo) {
