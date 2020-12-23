@@ -176,86 +176,79 @@
     </div>
     
     <div class="attributes">
-        <table class="attribtable">
-            <tr>
-                <h2 class="vaesenheader">Attributes</h3>
-                <th></th>
-            </tr>
-            <tr>
-                <td><input disabled class="vaesenlabel-short" value="Physique"></td>
-                <td><input type="number" value="1" name="attr_Physique" title="A measure of how big and strong you are."></td><td><button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Physique Check}}{{attribvalue=@{physique}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{physique}+@{equipedbonus}-[[@{physicalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Physique"></button></td>
-            </tr>
-            <tr>
-                <td><input disabled class="vaesenlabel-short" value="Precision"></td>
-                <td><input type="number" value="1" name="attr_Precision" title="A measure of your coordination and motor skills."></td><td><button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Precision Check}}{{attribvalue=@{precision}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{precision}+@{equipedbonus}-[[@{physicalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Precision"></button></td>
+        <h2 class="vaesenheader">Attributes</h2>
 
-            </tr>
-            <tr>
-                <td><input disabled class="vaesenlabel-short" value="Logic"></td>
-                <td><input type="number" value="1" name="attr_Logic" title="A measure of your intelligence & education."></td><td><button type="roll" class="vaesendie" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Logic Check}}{{attribvalue=@{logic}}}{{bonus=@{equipedbonus}}}{{condition=[[@{mentalcondition}]]}}{{result=[[[[{(@{logic}+@{equipedbonus}-[[@{mentalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Logic"></button></td>
-            </tr>
-            <tr>
-                <td><input disabled class="vaesenlabel-short" value="Empathy"></td>
-                <td><input type="number" value="1" name="attr_Empathy" title="A measure of your charm & ability to understand others."></td><td><button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Empathy Check}}{{attribvalue=@{empathy}}}{{bonus=@{equipedbonus}}}{{condition=[[@{mentalcondition}]]}}{{result=[[[[{(@{empathy}+@{equipedbonus}-[[@{mentalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Empathy"></button></td>
-            </tr>
-        </table>
+        <span class="vaesenlabel-short" data-i18n="physique-u">Physique</span>
+        <input type="number" value="1" name="attr_Physique" data-i18n-title="physiquedesc-u" title="A measure of how big and strong you are.">
+        <button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Physique Check}}{{attribvalue=@{physique}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{physique}+@{equipedbonus}-[[@{physicalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Physique"></button>
+        <br>
+        <span class="vaesenlabel-short" data-i18n="precision-u">Precision</span>
+        <input type="number" value="1" name="attr_Precision" data-i18n-title="precisiondesc-u" title="A measure of your coordination and motor skills.">
+        <button type="roll" class="vaesendie" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Precision Check}}{{attribvalue=@{precision}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{precision}+@{equipedbonus}-[[@{physicalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Logic"></button>
+
+        <br>
+        <span class="vaesenlabel-short" data-i18n="logic-u">Logic</span>
+        <input type="number" value="1" name="attr_Logic" data-i18n-title="logicdesc-u" title="A measure of your intelligence & education.">
+        <button type="roll" class="vaesendie" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Logic Check}}{{attribvalue=@{logic}}}{{bonus=@{equipedbonus}}}{{condition=[[@{mentalcondition}]]}}{{result=[[[[{(@{logic}+@{equipedbonus}-[[@{mentalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Logic"></button>
+        <br>
+        <span class="vaesenlabel-short" data-i18n="empathy-u">Empathy</span>
+        <input type="number" value="1" name="attr_Empathy" data-i18n-title="empathydesc-u" title="A measure of your charm & ability to understand others.">
+        <button class="vaesendie" type="roll" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Empathy Check}}{{attribvalue=@{empathy}}}{{bonus=@{equipedbonus}}}{{condition=[[@{mentalcondition}]]}}{{result=[[[[{(@{empathy}+@{equipedbonus}-[[@{mentalcondition}]]),1}kh1]]d6>6]]}}" name="roll_Empathy"></button>
+
         <HR class="break">
         <table>
             <tr>
                 <td>
-                    <input disabled class="vaesenlabel-short" value="Resources" style="font-size:large; width:100px;">
+                    <span class="vaesenlabel-short" style="font-size:large; width:100px;" data-i18n="resourcestitle-u">Resources</span>
                 </td>
                 <td>
                     <input type="text" name="attr_resources" class="resourcetext" value="0"><button type="roll" class="vaesendie" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=Resource Check}}{{attribvalue=@{resources}}}{{bonus=@{equipedbonus}}}{{result=[[(@{resources}+@{equipedbonus})d6>6]]}}" name="roll_resource"></button>
                 </td>
             </tr>
         </table>
+        <span class="vaesenlabel-short" data-i18n="capital-u">Capital</span>
+        <input type="number" name="attr_capital" class="attribtext" value="0"><br>
+        <span class="vaesenlabel-short" data-i18n="spent-u">Spent</span>
+        <input type="number" name="attr_spent" class="attribtext" value="0">
 
-        <table>
-            <tr>
-                <TD><input disabled class="vaesenlabel-short" value="Capital:"> </TD><td><input type="number" name="attr_capital" class="attribtext" value="0"></td>
-            </tr>
-            <tr>
-                <TD><input disabled class="vaesenlabel-short" value="Spent:"></TD><td><input type="number" name="attr_spent" class="attribtext" value="0"></td>
-            </tr>
-        </table>
         
         <hr class="minorbreak">
-        <input disabled class="vaesenlabel-short" value="Lifestyle"><input type="number" name="attr_lifestyle" class="attribtext" title="Used as a bonus when bartering with an NPC over an item they do not wish to part with" value="0"><button type="action" name="act_lifestyle">Use</button>
+        <span class="vaesenlabel-short" data-i18n="lifestyle-u">Lifestyle</span>
+        <input type="number" name="attr_lifestyle" class="attribtext" title="Used as a bonus when bartering with an NPC over an item they do not wish to part with" value="0"><button type="action" name="act_lifestyle">Use</button>
     </div>
     <div class="rightcolumn">
-        <h2 class="vaesenheader">Conditions</h2>    
+        <h2 class="vaesenheader" data-i18n="conditionsheader-u">Conditions</h2>    
 
         <table>
             <tr>
                 <td>
-                    <input disabled class="vaesenlabel-table" value="Physical"><br>
+                    <span class="vaesenlabel-table" data-i18n="physicalcon-u">Physical</span><br>
                     <input type="number" name="attr_physicalcondition" value="@{exhausted}+@{battered}+@{wounded}" disabled class="vaesenlabel-table">
                 </td>
                 <td>
-                    <input disabled class="vaesenlabel-table" value="Exhausted">
+                    <span class="vaesenlabel-table" data-i18n="exhausted-u">Exhausted</span>
                     <input type="checkbox" name="attr_exhausted" value="1"><BR>
-                    <input disabled class="vaesenlabel-table" value="Battered">
+                    <span class="vaesenlabel-table" data-i18n="batteredcon-u">Battered</span>
                     <input type="checkbox" name="attr_battered" value="1"><BR>
-                    <input disabled class="vaesenlabel-table" value="Wounded">
+                    <span class="vaesenlabel-table" data-i18n="woundedcon-u">Wounded</span>
                     <input type="checkbox" name="attr_wounded" value="1"><BR>
-                    <input disabled class="vaesenlabel-table" value="Broken" style="border-top:1px solid black;">
+                    <span class="vaesenlabel-table" style="border-top:1px solid black;" data-i18n="brokencon-u">Broken</span>
                     <input type="checkbox" name="attr_physicalbroken" value="1">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input disabled class="vaesenlabel-table" value="Mental"><br>
+                    <span class="vaesenlabel-table" data-i18n="Mentalcon-u">Mental</span><br>
                     <input type="number" name="attr_mentalcondition" value="@{angry}+@{frightened}+@{hopeless}" disabled class="vaesenlabel-table">
                 </td>
                 <td>
-                    <input disabled class="vaesenlabel-table" value="Angry">
+                    <span class="vaesenlabel-table" data-i18n="Angry-u">Angry</span>
                     <input type="checkbox" name="attr_angry" value="1"><br>
-                    <input disabled class="vaesenlabel-table" value="Frightened">
+                    <span class="vaesenlabel-table" data-i18n="frightened-u">Frightened</span>
                      <input type="checkbox" name="attr_frightened" value="1"><br>
-                     <input disabled class="vaesenlabel-table" value="Hopeless">
+                     <span class="vaesenlabel-table" data-i18n="hopeless-u">Hopeless</span>
                     <input type="checkbox" name="attr_hopeless" value="1"><br>
-                    <input disabled class="vaesenlabel-table" value="Broken" style="border-top:1px solid black;">
+                    <span class="vaesenlabel-table" style="border-top:1px solid black;" data-i18n="brokencon-u">Broken</span>
                     <input type="checkbox" name="attr_mentalbroken" value="1"><br>
                 </td>
             </tr>
@@ -264,26 +257,26 @@
         <h2 class="vaesenheader">Skills</h2>
                 <!-- [[[[{10-15,1}kh1]]d6>6]] Roll minimum 1 die -->
             
-        <input disabled class="vaesenlabel-skilltable" value="Agility (ph)" title="Used to run fast, be flexible and leap out of danger.">
-        <input type="number" value="0" name="attr_agility" title="Used to run fast, be flexible and leap out of danger.">
+        <span class="vaesenlabel-skilltable" data-i18n="agility-u" title="Use when fighting with melee weapons." data-i18n-title="agilitytip-u">Agility (ph)</span>
+        <input type="number" value="0" name="attr_agility">
         <button class="vaesendie" type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Agility Check}}{{attribvalue=@{physique}}}{{skillvalue=@{agility}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{agility=@{armoragility}}}{{result=[[[[{(@{physique}-[[@{physicalcondition}]]+@{agility}+@{equipedbonus}-@{armoragility}),1}kh1]]d6>6]]}}" ></button>    
         <br>
-        <input disabled class="vaesenlabel-skilltable" value="Close Combat (ph)">
-        <input type="number" value="0" name="attr_closecombat" title="Use when fighting with melee weapons.">
+        <span class="vaesenlabel-skilltable" data-i18n="closecombat-u" title="Use when fighting with melee weapons." data-i18n-title="closecombattip-u">Close Combat (ph)</span>
+        <input type="number" value="0" name="attr_closecombat">
         <button name="closecombat_roll" class="vaesendie" type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Close Combat Check}}{{attribvalue=@{physique}}}{{skillvalue=@{closecombat}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{physique}-[[@{physicalcondition}]]+@{closecombat}+@{equipedbonus}),1}kh1]]d6>6]]}}"></button>
         <br>
-        <input disabled class="vaesenlabel-skilltable" value="Force (ph)">
-        <input type="number" value="0" name="attr_force" title="Using brute strength to lift or endure pain.  Used for unarmed combat.">
+        <span class="vaesenlabel-skilltable" data-i18n="force-u" title="Using brute strength to lift or endure pain.  Used for unarmed combat." data-i18n-title="forcetip-u">Force(ph)</span>
+        <input type="number" value="0" name="attr_force">
         <button name="force_roll" class="vaesendie" type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Force Check}}{{attribvalue=@{physique}}}{{skillvalue=@{force}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{physique}-[[@{physicalcondition}]]+@{force}+@{equipedbonus}),1}kh1]]d6>6]]}}"></button>
         <br>
         
-        <input disabled class="vaesenlabel-skilltable" value="Medicine (pr)">
-        <input type="number" value="0" name="attr_medicine" title="Used for healing the injured and provide knowledge about anatomy, disease & injuries.">
+        <span class="vaesenlabel-skilltable" data-i18n="medicine-u" title="Used for healing the injured and provide knowledge about anatomy, disease & injuries." data-i18n-title="medicinetip-u">Medicine (pr)</span>
+        <input type="number" value="0" name="attr_medicine" >
         <button name="medicine_roll" class="vaesendie" type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Medicine Check}}{{attribvalue=@{precision}}}{{skillvalue=@{medicine}}}{{bonus=@{equipedbonus}}}{{condition=[[@{physicalcondition}]]}}{{result=[[[[{(@{precision}-[[@{physicalcondition}]]+@{medicine}+@{equipedbonus}),1}kh1]]d6>6]]}}"></button>    
         <br>
     
-        <input disabled class="vaesenlabel-skilltable" value="Ranged Combat (pr)">
-        <input type="number" value="0" name="attr_rangedcombat" title="Used for attacking with ranged weapons or explosives.">
+        <span class="vaesenlabel-skilltable" data-i18n="ranged-u"  title="Used for attacking with ranged weapons or explosives." data-i18n-title="rangedtip-u">Ranged Combat (pr)</span>
+        <input type="number" value="0" name="attr_rangedcombat">
         <button name="rangedcombat_roll" class="vaesendie"  type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Ranged Combat Check}}{{attribvalue=@{precision}}}{{skillvalue=@{rangedcombat}}}{{condition=[[@{physicalcondition}]]}}{{bonus=@{equipedbonus}}}{{result=[[[[(@{precision}-[[@{physicalcondition}]]+@{rangedcombat}+@{equipedbonus}),1}kh1]]d6>6]]}}"></button>    
         <br>
     
