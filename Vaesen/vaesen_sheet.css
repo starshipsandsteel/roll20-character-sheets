@@ -128,6 +128,7 @@
     width:40px !important;
     padding-bottom:10px;
     color: #422d22;
+    display:inline-block;
 }
 .sheet-vaesenlabel{
     background:transparent;
@@ -137,6 +138,7 @@
     border:transparent;
     width:239px;
     padding-bottom:10px;
+    display:inline-block;
 }
 .sheet-vaesenlabel-medium{
     background:transparent;
@@ -146,6 +148,7 @@
     border:transparent;
     width:160px;
     padding-bottom:10px;
+    display:inline-block;
 }
 .sheet-vaesenlabel-short{
     background:transparent;
@@ -155,6 +158,7 @@
     border:transparent;
     width:80px;
     padding-bottom:10px;
+    display:inline-block;
 }
 .sheet-vaesenlabel-NPCattrib{
     background:transparent;
@@ -164,6 +168,7 @@
     border:transparent;
     width:150px;
     padding-bottom:0px;
+    display:inline-block;
 }
 
 .sheet-vaesenlabel-table{
@@ -174,6 +179,7 @@
     border:transparent;
     width:80px;
     padding-bottom:0px;
+    display:inline-block;
 }
 .sheet-vaesenlabel-skilltable{
     background:transparent;
@@ -183,6 +189,7 @@
     border:transparent;
     width:125px;
     padding-bottom:0px;
+    display:inline-block;
 }
 .sheet-vaesentextarea{
     height:10em;

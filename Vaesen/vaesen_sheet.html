@@ -70,7 +70,7 @@
         <input class="vaesentext-name" Type="text" name="attr_character_name">
         <button type="roll" class="vaesend66" title="d66" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=D66 Roll}}{{result=[[[[d6]][[d6]]]]}}" name="roll_protection"></button>
         <br>
-        <input disabled class="vaesenlabel" value="Name">
+        <span class="vaesenlabel" data-i18n="charname-u">Name</span>
     </div>
     <div class="header-image">
         
@@ -80,95 +80,95 @@
         <input class="vaesentext" Type="text" name="attr_Age">
         <input class="vaesentext" Type="text" name="attr_Archetype">
         <Br>
-        <input disabled class="vaesenlabel" value="Age/Age Group">
-        <input disabled class="vaesenlabel" value="Archetype"><br>
+        <span class="vaesenlabel" data-i18n="agegroup-u">Age/Age Group</span>
+        <span class="vaesenlabel" data-i18n="archetype-u">Archetype</span><br>
         <input class="vaesentext" type="text" name="attr_Motivation">
 
         <BR>
-        <input disabled class="vaesenlabel" value="Motivation">
+        <span class="vaesenlabel">Motivation</span>
         <hr class="break">
         <br>
-        <input disabled class="vaesenlabel" value="Trauma" style="width:249px;">
-        <input disabled class="vaesenlabel" value="Dark Secret"><br>
+        <span class="vaesenlabel" style="width:249px;" data-i18n="trauma-u">Trauma</span>
+        <span class="vaesenlabel" style="width:249px;" data-i18n="darksecret-u">Dark Secret</span>
         <textarea class="vaesentextarea" name="attr_trauma"></textarea>
         <textarea class="vaesentextarea" name="attr_darksecret"></textarea>
         <br>
 
     </div>
     <div class="leftbody">
-        <h2 class="vaesenheader">Relationships</h2>
+        <h2 class="vaesenheader" data-i18n="relationships-u">Relationships</h2>
         <table>
             <fieldset class="repeating_relationships">
                 <input class="vaesentext" style="width:40px;" type="text" name="attr_RelationPC" placeholder="PC#">
                 <input class="vaesentext" style="width:200px;"type="text" name="attr_Relation" >
             </fieldset>
         </table>
-        <h2 class="vaesenheader">Talents</h2>
+        <h2 class="vaesenheader" data-i18n="talents-u">Talents</h2>
         <fieldset class="repeating_Talents">
             <input class="vaesentext-col" type="text" name="attr_Talent1" >
         </fieldset>
     </div>
      <div class="rightbody">
-        <h2 class="vaesenheader">Insights & Defects</h2>
+        <h2 class="vaesenheader" data-i18n="insights-u">Insights & Defects</h2>
         <fieldset class="repeating_insights">
             <input class="vaesentext-col" type="text" name="attr_insights" >
         </fieldset>
-        <h2 class="vaesenheader">Advantages</h2>
+        <h2 class="vaesenheader" data-i18n="advantages-u">Advantages</h2>
         <fieldset class="repeating_advantages">
             <input class="vaesentext-col" type="text" name="attr_advantages" >
         </fieldset>    
     </div>
 
     <div class="equipment">
-        <h2 class="vaesenheader">Equipment</h2>
-        <input class="vaesenlabel" type="text" value="Equipment" disabled  style="width:150px;">
-        <input class="vaesennumberlabel" type="text" value="Mod." disabled>
+        <h2 class="vaesenheader" data-i18n="equipment-u">Equipment</h2>
+        <span class="vaesenlabel" style="width:150px" data-i18n="equipmentname-u">Equipment</span>
+        <span class="vaesennumberlabel" style="width:150px" data-i18n="equmod-u">Mod.</span>
         <fieldset class="repeating_equipment">
             <input class="vaesentext" type="text" name="attr_equipment" style="width:150px;">
             <input class="vaesennumber" type="number" name="attr_equbonus">
-            <button type="action" name="act_equip">Use</button>
+            <button type="action" name="act_equip" data-i18n="buttonuse1-u">Use</button>
         </fieldset>
-        <button type="action" name="act_clearequ">Clear</button>
+        <button type="action" name="act_clearequ" data-i18n="buttonclear-u">Clear</button>
     </div>
     <div class="diemod">
-        <h2 class="vaesenheader">Dice Modifier</h2>
-        <input class="vaesenlabel-short" type="text" value="Dice Mod." disabled>
+        <h2 class="vaesenheader" data-i18n="dicemodheader-u">Dice Modifier</h2>
+        <span class="vaesenlabel-short" data-i18n="dicemodlabel-u">Dice Mod.</span>
         <input type="text" name="attr_equipedbonus" class="resourcetext" value="0"><button  class="vaesendie" name="basciroll_roll" title="Only use to roll just the die modifier." type="roll" value="&{template:vaesen-skill}{{playername=@{character_name}}}{{skillname=Basic Die Roll}}{{bonus=@{equipedbonus}}}{{result=[[@{equipedbonus}d6>6]]}}"></button>
         <br>
         <button class="widebutton" type="action" name="act_increasebonus">+</button>
         <button class="widebutton" type="action" name="act_decreasebonus">-</button>
-        <button type="action" name="act_clearequ">Clear</button>
+        <button type="action" name="act_clearequ" data-i18n="buttonclear-u">Clear</button>
     </div>
     <div class="wideequipment">
-        <h2 class="vaesenheader">Mementos</h2>
+        <h2 class="vaesenheader" data-i18n="mementosheader-u">Mementos</h2>
         <fieldset class="repeating_mementos">
             <input class="vaesentext" style="width: 400px;" type="text" name="attr_Mementos" >
         </fieldset>   
-        <h2 class="vaesenheader">Armor</h2>
-        <input class="vaesenlabel" Value="Armor Name" disabled> 
-        <input class="vaesennumberlabel" Value="Prtct" disabled>
-        <input class="vaesennumberlabel" Value="Agil" disabled><br>
+        <h2 class="vaesenheader" data-i18n="armorheader-u">Armor</h2>
+        <span class="vaesenlabel" data-i18n="armorname-u">Armor Name</span>
+        <span class="vaesennumberlabel" data-i18n="protect-u">Prtct</span>
+        <span class="vaesennumberlabel" data-i18n="agilitymod-u">Agil</span>
         <input class="vaesentext" Type="text" name="attr_armor"></td>
         <input class="vaesennumber" Type="number" name="attr_armorprotection" value="0">
         <input class="vaesennumber" Type="number" name="attr_armoragility" value="0"><button type="roll" class="vaesendie" value="&{template:vaesen-attrib}{{playername=@{character_name}}}{{attribname=@{armor} Check}}{{attribvalue=@{armorprotection}}}{{bonus=@{equipedbonus}}}{{result=[[(@{armorprotection}+@{equipedbonus})d6>6]]}}" name="roll_protection"></button>
 
 
-        <h2 class="vaesenheader">Weapons</h2>
+        <h2 class="vaesenheader" data-i18n="weaponsheader-u">Weapons</h2>
 
-        <input class="vaesenlabel" Value="Name" disabled style="width:200px;"> 
-        <input class="vaesenlabel-short" Value="Range" disabled> 
-        <input class="vaesennumberlabel" Value="Damage" disabled> 
-        <input class="vaesenlabel-short" Value="Type" disabled> 
-        <input class="vaesennumberlabel" Value="Bonus" disabled> <br>
+        <span class="vaesenlabel" style="width:200px;" data-i18n="armorname-u">Weapon Name</span>
+        <span class="vaesenlabel-short" data-i18n="range-u">RNG</span>
+        <span class="vaesennumberlabel" data-i18n="Damage-u">DMG</span>
+        <span class="vaesenlabel-short" data-i18n="type-u">TYP</span>
+        <span class="vaesennumberlabel" data-i18n="bonus-u">Bonus</span>
 
         <fieldset class="repeating_weapons"> 
             <input class="vaesentext" type="text" name="attr_weapon" style="width:200px;">
             <input class="vaesentext-short" type="text" name="attr_range">
             <input class="vaesennumber" type="number" name="attr_damage">
             <select class="vaesentext-short" name="attr_weatype" class="dtype">
-                <option value="@{force}+@{physique}" >Unarmed</option>
-                <option value="@{closecombat}+@{physique}" selected="selected">Melee</option>
-                <option value="@{rangedcombat}+@{precision}">Ranged</option>
+                <option value="@{force}+@{physique}" data-i18n="unarmed-u">Unarmed</option>
+                <option value="@{closecombat}+@{physique}" data-i18n="melee-u" selected="selected">Melee</option>
+                <option value="@{rangedcombat}+@{precision}" data-i18n="ranged-u">Ranged</option>
             </select>
             <input class="vaesennumber" type="number" name="attr_bonus">
             <button type="roll" class="vaesendie"  value="&{template:vaesen-attack}{{playername=@{character_name}}}{{attribname=@{weapon} attack!}}{{attribvalue=@{weatype}}}{{weabonus=@{bonus}}}{{bonus=@{equipedbonus}}}{{damage=@{damage}}}{{result=[[(@{weatype}+@{bonus}+@{equipedbonus})d6>6]]}}" name="roll_attack"></button>
